@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using BoDi;
 using NUnit.Framework;
+using System.IO;
 
 namespace IJPProject
 {
@@ -31,7 +32,7 @@ namespace IJPProject
         [BeforeScenario]
         public void setup()
         {
-            driver = new ChromeDriver(@"D:\Users\nagasanthi.katreddy\Downloads\IJPProject (2)\IJPProject\IJPProject\IJPProject\Drivers");
+            driver = new ChromeDriver(@"D:\Users\nagasanthi.katreddy\Downloads\IJPProject\IJPProject\IJPProject\IJPProject\Drivers");
             objectcontainer.RegisterInstanceAs<IWebDriver>(driver);
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["site"]);
@@ -40,6 +41,16 @@ namespace IJPProject
         [AfterScenario]
         public void TearDown()
         {
+            string Error = string.Empty;
+            if (SC.TestError!=null)
+            {
+                Screenshot s = ((ITakesScreenshot)driver).GetScreenshot();
+                string path = @"D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject\Screenshots\";
+                string Screenshotpath = Path.Combine(path, SC.ScenarioInfo.Title.Replace(" ", "") + "_" + DateTime.Now.ToString("MM-dd-yyyy") + "_ERROR" + ".png");
+                s.SaveAsFile(Screenshotpath, ScreenshotImageFormat.Png);
+                Error = SC.TestError.ToString();
+                Console.WriteLine("error:" + Error);               
+            }
             driver.Quit();
         }
     }
