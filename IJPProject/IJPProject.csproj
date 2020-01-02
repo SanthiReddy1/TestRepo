@@ -140,6 +140,8 @@
   <ItemGroup>
     <Compile Include="Base.cs" />
     <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\ProductsPage.cs" />
+    <Compile Include="Pages\SearchPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\SnapDealSearchSteps.cs" />
     <Compile Include="Synchronization.cs" />
