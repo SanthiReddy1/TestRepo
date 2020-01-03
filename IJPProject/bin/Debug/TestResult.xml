@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run start-time="2020-01-03 12:05:57Z">
+  <command-line><![CDATA[nunit3-console  IJPProject.dll]]></command-line>
+</test-run>

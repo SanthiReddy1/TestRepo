@@ -22,13 +22,15 @@ namespace IJPProject.Features
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("SnapDealSearch")]
     [NUnit.Framework.CategoryAttribute("SnapDeal")]
+    [NUnit.Framework.CategoryAttribute("Search")]
     public partial class SnapDealSearchFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = new string[] {
-                "SnapDeal"};
+                "SnapDeal",
+                "Search"};
         
 #line 1 "SnapDealSearch.feature"
 #line hidden
@@ -38,7 +40,8 @@ namespace IJPProject.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SnapDealSearch", null, ProgrammingLanguage.CSharp, new string[] {
-                        "SnapDeal"});
+                        "SnapDeal",
+                        "Search"});
             testRunner.OnFeatureStart(featureInfo);
         }
         

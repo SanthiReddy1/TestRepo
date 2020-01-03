@@ -1,4 +1,4 @@
-﻿@SnapDeal
+﻿@SnapDeal @Search
 Feature: SnapDealSearch
 	
 @Search
