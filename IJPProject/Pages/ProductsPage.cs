@@ -17,6 +17,8 @@ namespace IJPProject.Pages
         IList<string> ProductCosts = new List<string>();
         IList<string> Names = new List<string>();
         IList<string> Costs = new List<string>();
+        public static By AddtoCart = By.XPath("//span[text()='add to cart']");
+        public static By Cart = By.XPath("//div[contains(@class,'cartContainer ')]");
         public ProductsPage(IWebDriver driver)
         {
             _driver = driver;
@@ -28,7 +30,8 @@ namespace IJPProject.Pages
             string parentWindow = _driver.CurrentWindowHandle;
             sync.WaitUntilVisible(By.XPath("//div[@id='products']/section[@data-dpwlbl='Product Grid']/div[1]"), 100);
             IList<IWebElement> products = _driver.FindElements(By.XPath("//div[@id='products']/section[@data-dpwlbl='Product Grid']/div"));
-            for (int i = 0; i < count; i++)
+
+            for (int i = 0; i < count; i++) //get product names and costs
             {
                 IList<string> window = null;      
                 products[i].Click();
@@ -42,7 +45,7 @@ namespace IJPProject.Pages
                 productNames.Add(name.Text.Trim());
                 //ProductCosts[i - 1] = cost.Text.Trim();
                 ProductCosts.Add(cost.Text.Trim());
-                _driver.FindElement(By.XPath("//span[text()='add to cart']")).Click();
+                _driver.FindElement(AddtoCart).Click();
                 Thread.Sleep(500);
                 _driver.SwitchTo().Window(parentWindow);
             }
@@ -52,13 +55,14 @@ namespace IJPProject.Pages
         {
             char[] charsToTrim = { 'R', 's', '.', '4' };
             _driver.Navigate().Refresh();
-            sync.WaitUntilClickable(By.XPath("//div[contains(@class,'cartContainer ')]"),5);
-            _driver.FindElement(By.XPath("//div[contains(@class,'cartContainer ')]")).Click();
+            sync.WaitUntilClickable(Cart,5);
+            _driver.FindElement(Cart).Click();
             Thread.Sleep(2000);
             IList<IWebElement> PNames = _driver.FindElements(By.XPath("//a[@class='item-name']"));
             IList<IWebElement> Pcosts = _driver.FindElements(By.XPath("//span[@class='item-price']"));
             int ProductsCount = PNames.Count;
-            for (int i = ProductsCount; i >0; i--)
+
+            for (int i = ProductsCount; i >0; i--) //Get name and cost of products in cart
             {
                 Names.Add(PNames[i - 1].Text.Trim());
                 Costs.Add(Pcosts[i - 1].Text.TrimStart(charsToTrim).Trim());

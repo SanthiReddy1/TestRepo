@@ -32,8 +32,9 @@ namespace IJPProject.Pages
             sync.WaitUntilVisible(SignIn, 20);
             _driver.FindElement(SignIn).Click();
             _driver.FindElement(LoginLink).Click();
-            _driver.SwitchTo().Frame(_driver.FindElement(By.XPath("//iframe[@name='iframeLogin']")));
-            sync.WaitUntilClickable(LoginEmail, 10);
+            sync.WaitUntilClickable(By.XPath("//iframe[@name='iframeLogin']"), 5);
+            _driver.SwitchTo().Frame(_driver.FindElement(By.XPath("//iframe[@name='iframeLogin']")));//Login Frame
+            sync.WaitUntilVisible(LoginEmail, 10);
             _driver.FindElement(LoginEmail).SendKeys(ConfigurationManager.AppSettings["Username"]);
             _driver.FindElement(Continue).Click();
             Thread.Sleep(500);

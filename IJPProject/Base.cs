@@ -42,14 +42,21 @@ namespace IJPProject
         public void TearDown()
         {
             string Error = string.Empty;
-            if (SC.TestError!=null)
+            try
             {
-                Screenshot s = ((ITakesScreenshot)driver).GetScreenshot();
-                string path = @"D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject\Screenshots\";
-                string Screenshotpath = Path.Combine(path, SC.ScenarioInfo.Title.Replace(" ", "") + "_" + DateTime.Now.ToString("MM-dd-yyyy") + "_ERROR" + ".png");
-                s.SaveAsFile(Screenshotpath, ScreenshotImageFormat.Png);
-                Error = SC.TestError.ToString();
-                Console.WriteLine("error:" + Error);               
+                if (SC.TestError != null)
+                {
+                    Screenshot s = ((ITakesScreenshot)driver).GetScreenshot();
+                    string path = @"D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject\Screenshots\";
+                    string Screenshotpath = Path.Combine(path, SC.ScenarioInfo.Title.Replace(" ", "") + "_" + DateTime.Now.ToString("MM-dd-yyyy") + "_ERROR" + ".png");
+                    s.SaveAsFile(Screenshotpath, ScreenshotImageFormat.Png);
+                    Error = SC.TestError.ToString();
+                    Console.WriteLine("error:" + Error);
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
             }
             driver.Quit();
         }
