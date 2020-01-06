@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="2" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-03 13:18:32Z" end-time="2020-01-03 13:19:17Z" duration="45.222271">
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="2" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-06 06:25:51Z" end-time="2020-01-06 06:26:39Z" duration="47.723889">
   <command-line><![CDATA[nunit3-console  /result:D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject\XmlReports\Search.xml D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject\bin\Debug\IJPProject.dll --where:cat==Search]]></command-line>
   <filter>
     <cat>Search</cat>
   </filter>
-  <test-suite type="Assembly" id="0-1003" name="IJPProject.dll" fullname="D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject\bin\Debug\IJPProject.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-03 13:18:33Z" end-time="2020-01-03 13:19:17Z" duration="44.473439" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+  <test-suite type="Assembly" id="0-1003" name="IJPProject.dll" fullname="D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject\bin\Debug\IJPProject.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-06 06:25:52Z" end-time="2020-01-06 06:26:39Z" duration="46.944698" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
     <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.14393.0" platform="Win32NT" cwd="D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject" machine-name="IP-C613BEB5" user="nagasanthi.katreddy" user-domain="EVESTMENT" culture="en-US" uiculture="en-US" os-architecture="x64" />
     <settings>
       <setting name="DisposeRunners" value="True" />
@@ -16,39 +16,41 @@
       <setting name="NumberOfTestWorkers" value="4" />
     </settings>
     <properties>
-      <property name="_PID" value="57728" />
+      <property name="_PID" value="49196" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
-    <test-suite type="SetUpFixture" id="0-1000" name="[default namespace]" fullname="IJPProject_NUnitAssemblyHooks" classname="IJPProject_NUnitAssemblyHooks" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-03 13:18:33Z" end-time="2020-01-03 13:19:17Z" duration="44.443991" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+    <test-suite type="SetUpFixture" id="0-1000" name="[default namespace]" fullname="IJPProject_NUnitAssemblyHooks" classname="IJPProject_NUnitAssemblyHooks" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-06 06:25:52Z" end-time="2020-01-06 06:26:39Z" duration="46.915811" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
       <properties />
       <output><![CDATA[-> Loading plugin D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject\bin\Debug\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
 -> Using default config
+path is:=>D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject
 ]]></output>
-      <test-suite type="TestSuite" id="0-1004" name="IJPProject" fullname="IJPProject" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-03 13:18:34Z" end-time="2020-01-03 13:19:17Z" duration="43.430528" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+      <test-suite type="TestSuite" id="0-1004" name="IJPProject" fullname="IJPProject" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-06 06:25:53Z" end-time="2020-01-06 06:26:36Z" duration="42.673523" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
         <properties />
-        <test-suite type="TestSuite" id="0-1005" name="Features" fullname="IJPProject.Features" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-03 13:18:34Z" end-time="2020-01-03 13:19:17Z" duration="43.430460" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+        <test-suite type="TestSuite" id="0-1005" name="Features" fullname="IJPProject.Features" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-06 06:25:53Z" end-time="2020-01-06 06:26:36Z" duration="42.673463" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
           <properties />
-          <test-suite type="TestFixture" id="0-1001" name="SnapDealSearchFeature" fullname="IJPProject.Features.SnapDealSearchFeature" classname="IJPProject.Features.SnapDealSearchFeature" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-03 13:18:34Z" end-time="2020-01-03 13:19:17Z" duration="43.428284" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+          <test-suite type="TestFixture" id="0-1001" name="SnapDealSearchFeature" fullname="IJPProject.Features.SnapDealSearchFeature" classname="IJPProject.Features.SnapDealSearchFeature" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-06 06:25:53Z" end-time="2020-01-06 06:26:36Z" duration="42.671247" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
             <properties>
               <property name="Description" value="SnapDealSearch" />
               <property name="Category" value="SnapDeal" />
               <property name="Category" value="Search" />
             </properties>
-            <test-case id="0-1002" name="AddProductsToCart" fullname="IJPProject.Features.SnapDealSearchFeature.AddProductsToCart" methodname="AddProductsToCart" classname="IJPProject.Features.SnapDealSearchFeature" runstate="Runnable" seed="1475228709" result="Passed" start-time="2020-01-03 13:18:34Z" end-time="2020-01-03 13:19:17Z" duration="43.411544" asserts="2">
+            <test-case id="0-1002" name="AddProductsToCart" fullname="IJPProject.Features.SnapDealSearchFeature.AddProductsToCart" methodname="AddProductsToCart" classname="IJPProject.Features.SnapDealSearchFeature" runstate="Runnable" seed="1528719696" result="Passed" start-time="2020-01-06 06:25:53Z" end-time="2020-01-06 06:26:36Z" duration="42.645437" asserts="2">
               <properties>
                 <property name="Description" value="Add Products to Cart" />
                 <property name="Category" value="Search" />
               </properties>
-              <output><![CDATA[Given I login to the SnapDeal site
--> done: SnapDealSearchSteps.GivenILoginToTheSnapDealSite() (2.1s)
+              <output><![CDATA[path is:=>D:\Users\nagasanthi.katreddy\Desktop\IJPProject\IJPProject\IJPProject\IJPProject
+Given I login to the SnapDeal site
+-> done: SnapDealSearchSteps.GivenILoginToTheSnapDealSite() (2.0s)
 When I search for 'Perfumes'
--> done: SnapDealSearchSteps.WhenISearchForAProduct("Perfumes") (5.2s)
+-> done: SnapDealSearchSteps.WhenISearchForAProduct("Perfumes") (5.0s)
 And I apply 'Low To High' filter
--> done: SnapDealSearchSteps.WhenIApplyFilter("Low To High") (0.4s)
+-> done: SnapDealSearchSteps.WhenIApplyFilter("Low To High") (0.5s)
 And I add No of products from the search results to cart
 -> done: SnapDealSearchSteps.WhenIAddOfProductsFromTheSearchResultsToCart() (24.1s)
 Then I verify the products added to cart
--> done: SnapDealSearchSteps.ThenIVerifyTheProductsAddedToCart() (4.6s)
+-> done: SnapDealSearchSteps.ThenIVerifyTheProductsAddedToCart() (4.7s)
 ]]></output>
             </test-case>
           </test-suite>
